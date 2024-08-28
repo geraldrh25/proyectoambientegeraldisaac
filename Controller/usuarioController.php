@@ -11,7 +11,7 @@
         $Email = $_POST["txtEmail"];
         $Password = $_POST["txtPassword"];
         $RetypePassword = $_POST["txtRetypePassword"];
-        $respuesta = RegistrarUsuario($Identificacion,$Nombre,$Email,$Password,$RetypePassword);
+        $respuesta = RegistrarUsuario($Identificacion,$Nombre,$Email,$Password);
 
         if($respuesta == true)
         {

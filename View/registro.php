@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   </head>
 <body  class="hold-transition login-page bg-dark"  >
+<?php include_once '../Controller/usuarioController.php'; ?>
 
 <div class="login-box" >
   <div class="login-logo">
@@ -32,9 +33,9 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Registrar nuevo usuario</p>
 
-      <form action="../index.html" method="post">
+      <form method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name">
+          <input type="text" name="txtIdentificacion" class="form-control" placeholder="Identificacion">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -42,7 +43,15 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" name="txtNombre" class="form-control" placeholder="Nombre completo">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" name="txtEmail" class="form-control" placeholder="Correo">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -50,7 +59,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="txtPassword" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -58,7 +67,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password">
+          <input type="password" name="txtRetypePassword" class="form-control" placeholder="Retype password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -76,7 +85,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Registro</button>
+            <button name="btnRegistrarUsuario" type="submit" class="btn btn-primary btn-block">Registro</button>
           </div>
           <!-- /.col -->
         </div>

@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   </head>
 <body  class="hold-transition login-page bg-dark"  >
+<?php include_once '../Controller/usuarioController.php'; ?>
 
 <div class="login-box" >
   <div class="login-logo">
@@ -32,12 +33,12 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Ingresa tus datos</p>
 
-      <form action="../index.php" method="post">
+      <form method="post">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" name="txtIdentificacion" class="form-control" placeholder="Identificacion">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
@@ -53,7 +54,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Recuperar Contraseña</button>
+            <button type="submit" name="btnRecuperarAcceso" class="btn btn-primary btn-block">Recuperar Contraseña</button>
           </div>
           <!-- /.col -->
         </div>
